@@ -1,4 +1,4 @@
-# SmartCampus - REMAX
+# SmartCampus - Wolff
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 
@@ -10,17 +10,7 @@
 This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
 Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
 
-## Deployment
 
-Your project is live at:
-
-**[https://vercel.com/sebastianarbona-projects/remax-excelencia-lms](https://vercel.com/sebastianarbona-projects/remax-excelencia-lms)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/DsIjuyuKOdN](https://v0.app/chat/DsIjuyuKOdN)**
 
 ## How It Works
 
