@@ -19,9 +19,9 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "RE/MAX Campus - Plataforma de Formación",
-  description: "Impulsa tu carrera en Real Estate con las mejores herramientas y formación de la red RE/MAX",
-    generator: 'v0.app'
+  title: "Instituto Wolff - Plataforma de Formación en Cardiología",
+  description: "Formación continua en cardiología, medicina del deporte y prevención cardiovascular del Instituto Wolff.",
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="bg-background">
       <body className={`${inter.variable} ${sourceSans.variable} font-sans antialiased`}>
         {children}
         <Analytics />

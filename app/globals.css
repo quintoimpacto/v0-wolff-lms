@@ -4,8 +4,8 @@
 
 :root {
   /* ========================================
-     BYMA Design System - Global Tokens
-     Premium, institucional, profesional y cercano
+     Instituto Wolff Design System - Global Tokens
+     Cardiología institucional, profesional y cercano
      ======================================== */
   
   /* Start Shadcn/UI default values (to be overridden by user's specific values) */
@@ -55,23 +55,23 @@
   --popover: #FFFFFF;
   --popover-foreground: #111827;
   
-  /* Primary Blue - Corporativo (botones principales, highlights) */
-  --primary: #0244eb;
+  /* Primary Crimson - Wolff brand (botones principales, highlights) */
+  --primary: #A12642;
   --primary-foreground: #FFFFFF;
-  --primary-hover: #0238c7;
+  --primary-hover: #861f36;
   
   /* Secondary - Background sections */
   --secondary: #F7F8FA;
-  --secondary-foreground: #003DA5;
+  --secondary-foreground: #A12642;
   
   /* Muted - Text secondary and backgrounds */
   --muted: #F7F8FA;
   --muted-foreground: #6B7280;
   
-  /* Accent - CTA principal (mismo que primary para consistencia) */
-  --accent: #0244eb;
+  /* Accent - Golden amber Wolff accent */
+  --accent: #D28900;
   --accent-foreground: #FFFFFF;
-  --accent-hover: #0238c7;
+  --accent-hover: #b07500;
   
   /* States */
   --destructive: #DC2626;
@@ -83,7 +83,7 @@
   /* Borders & Inputs */
   --border: #E5E7EB;
   --input: #E5E7EB;
-  --ring: #0244eb;
+  --ring: #A12642;
   
   /* Text colors */
   --text-primary: #111827;
@@ -91,10 +91,10 @@
   --text-muted: #6B7280;
   
   /* Chart colors */
-  --chart-1: #0244eb;
-  --chart-2: #0238c7;
+  --chart-1: #A12642;
+  --chart-2: #D28900;
   --chart-3: #6B7280;
-  --chart-4: #2563EB;
+  --chart-4: #861f36;
   --chart-5: #4B5563;
   
   --radius: 0.5rem; /* User's specific radius */
@@ -102,21 +102,21 @@
   /* Sidebar */
   --sidebar: #FFFFFF;
   --sidebar-foreground: #111827;
-  --sidebar-primary: #0244eb;
+  --sidebar-primary: #A12642;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #F7F8FA;
-  --sidebar-accent-foreground: #0244eb;
+  --sidebar-accent-foreground: #A12642;
   --sidebar-border: #E5E7EB;
-  --sidebar-ring: #0244eb;
+  --sidebar-ring: #A12642;
   
   /* Hero / Feature Section */
-  --hero-bg: #003DA5;
+  --hero-bg: #A12642;
   --hero-foreground: #FFFFFF;
-  --hero-search-btn: #8B1A1A;
-  --hero-search-btn-hover: #6F1515;
-  --hero-pill-bg: rgba(212, 209, 199, 0.8);
-  --hero-pill-bg-hover: #D4D1C7;
-  --hero-pill-foreground: #2D2D2D;
+  --hero-search-btn: #861f36;
+  --hero-search-btn-hover: #6b1929;
+  --hero-pill-bg: rgba(255, 255, 255, 0.2);
+  --hero-pill-bg-hover: rgba(255, 255, 255, 0.3);
+  --hero-pill-foreground: #FFFFFF;
 
   /* Content Section Background */
   --content-bg: #F5F6F8;
@@ -217,8 +217,7 @@
   /* Custom BYMA Design System colors */
   --color-background-alt: var(--background-alt);
   --color-primary-hover: var(--primary-hover);
-  --color-accent-hover: var(--accent-hover);
-  --color-success: var(--success);
+  --color-accent-hover: var(--accent-hover);  --color-success: var(--success);
   --color-warning: var(--warning);
   --color-link: var(--link);
   --color-text-primary: var(--text-primary);

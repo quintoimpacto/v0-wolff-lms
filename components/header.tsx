@@ -1,7 +1,7 @@
 "use client"
 
+import Image from "next/image"
 import { Bell } from "lucide-react"
-import { RemaxLogo } from "@/components/remax-logo"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export function Header() {
@@ -9,7 +9,14 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full bg-background shadow-sm">
       <div className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-8 lg:px-10">
         {/* Logo */}
-        <RemaxLogo className="h-8 w-auto" />
+        <Image
+          src="/wolff-logo.png"
+          alt="Instituto Wolff Cardiología"
+          width={120}
+          height={40}
+          className="h-9 w-auto object-contain"
+          priority
+        />
 
         {/* Right: Notifications + Avatar */}
         <div className="flex items-center gap-4">
@@ -19,7 +26,7 @@ export function Header() {
           </button>
           <Avatar className="h-9 w-9 cursor-pointer">
             <AvatarImage src="/professional-man-portrait.png" alt="Usuario" className="object-cover" />
-            <AvatarFallback className="bg-hero-bg text-hero-foreground text-xs font-semibold">JD</AvatarFallback>
+            <AvatarFallback className="bg-hero-bg text-hero-foreground text-xs font-semibold">WF</AvatarFallback>
           </Avatar>
         </div>
       </div>
