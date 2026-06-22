@@ -141,7 +141,7 @@ function EnrollmentCard({ enrollment, viewMode }: { enrollment: Enrollment; view
             </div>
             <div className="flex gap-2">
               {enrollment.estado === "en_curso" && (
-                <Button size="sm" className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors" asChild>
+                <Button size="sm" className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors" asChild>
                   <Link href={`/alumno/mis-cursos/${enrollment.id}`}>
                     <PlayCircle className="mr-1 h-4 w-4" />
                     Ir al aula
@@ -149,7 +149,7 @@ function EnrollmentCard({ enrollment, viewMode }: { enrollment: Enrollment; view
                 </Button>
               )}
               {enrollment.estado === "pendiente_pago" && (
-                <Button size="sm" className="bg-[#F59E0B] hover:bg-[#D97706] transition-colors">
+                <Button size="sm" className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors">
                   <CreditCard className="mr-1 h-4 w-4" />
                   Pagar ${enrollment.montoPendiente?.toLocaleString()}
                 </Button>
@@ -226,7 +226,7 @@ function EnrollmentCard({ enrollment, viewMode }: { enrollment: Enrollment; view
 
         <div className="mt-4 pt-2">
           {enrollment.estado === "en_curso" && (
-            <Button className="w-full bg-[#0244eb] hover:bg-[#0238c7] transition-colors" asChild>
+            <Button className="w-full bg-[#111827] hover:bg-[#1F2937] text-white transition-colors" asChild>
               <Link href={`/alumno/mis-cursos/${enrollment.id}`}>
                 <PlayCircle className="mr-2 h-4 w-4" />
                 Ir al aula
@@ -234,7 +234,7 @@ function EnrollmentCard({ enrollment, viewMode }: { enrollment: Enrollment; view
             </Button>
           )}
           {enrollment.estado === "pendiente_pago" && (
-            <Button className="w-full bg-[#F59E0B] hover:bg-[#D97706] transition-colors">
+            <Button className="w-full bg-[#111827] hover:bg-[#1F2937] text-white transition-colors">
               <CreditCard className="mr-2 h-4 w-4" />
               Pagar ${enrollment.montoPendiente?.toLocaleString()}
             </Button>
@@ -310,7 +310,7 @@ export default function MisCursos() {
                 <Filter className="mr-2 h-4 w-4" />
                 Estado
                 {estadoFilter.length > 0 && (
-                  <Badge className="ml-2 h-5 w-5 rounded-none bg-[#0244eb] text-white p-0 text-xs">{estadoFilter.length}</Badge>
+                  <Badge className="ml-2 h-5 w-5 rounded-none bg-[#111827] text-white p-0 text-xs">{estadoFilter.length}</Badge>
                 )}
               </Button>
             </DropdownMenuTrigger>
@@ -380,7 +380,7 @@ export default function MisCursos() {
             <Button
               variant="ghost"
               size="sm"
-              className={`h-9 rounded-r-none ${viewMode === "grid" ? "bg-[#F7F8FA] text-[#0244eb]" : "text-[#6B7280]"}`}
+              className={`h-9 rounded-r-none ${viewMode === "grid" ? "bg-[#F7F8FA] text-[#111827]" : "text-[#6B7280]"}`}
               onClick={() => setViewMode("grid")}
               aria-label="Vista en grilla"
             >
@@ -389,7 +389,7 @@ export default function MisCursos() {
             <Button
               variant="ghost"
               size="sm"
-              className={`h-9 rounded-l-none ${viewMode === "list" ? "bg-[#F7F8FA] text-[#0244eb]" : "text-[#6B7280]"}`}
+              className={`h-9 rounded-l-none ${viewMode === "list" ? "bg-[#F7F8FA] text-[#111827]" : "text-[#6B7280]"}`}
               onClick={() => setViewMode("list")}
               aria-label="Vista en lista"
             >
@@ -406,7 +406,7 @@ export default function MisCursos() {
       {filteredAndSorted.length === 0 ? (
         <Card className="border-[#E5E7EB] bg-white p-12 text-center">
           <p className="text-[#6B7280]">No se encontraron inscripciones con los filtros seleccionados.</p>
-          <Button variant="link" onClick={() => setEstadoFilter([])} className="mt-2 text-[#2563EB] hover:text-[#0244eb]">
+          <Button variant="link" onClick={() => setEstadoFilter([])} className="mt-2 text-[#111827] hover:text-[#1F2937]">
             Limpiar filtros
           </Button>
         </Card>

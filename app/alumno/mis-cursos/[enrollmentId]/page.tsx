@@ -312,25 +312,25 @@ export default function CursoDetalle() {
         <TabsList className="h-auto flex-wrap gap-2 bg-transparent p-0">
           <TabsTrigger
             value="clases"
-            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#0244eb] data-[state=active]:bg-[#0244eb] data-[state=active]:text-white"
+            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#111827] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
           >
             Clases
           </TabsTrigger>
           <TabsTrigger
             value="actividades"
-            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#0244eb] data-[state=active]:bg-[#0244eb] data-[state=active]:text-white"
+            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#111827] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
           >
             Actividades
           </TabsTrigger>
           <TabsTrigger
             value="materiales"
-            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#0244eb] data-[state=active]:bg-[#0244eb] data-[state=active]:text-white"
+            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#111827] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
           >
             Materiales
           </TabsTrigger>
           <TabsTrigger
             value="certificado"
-            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#0244eb] data-[state=active]:bg-[#0244eb] data-[state=active]:text-white"
+            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#111827] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
           >
             Certificado
           </TabsTrigger>
@@ -364,8 +364,8 @@ export default function CursoDetalle() {
                         className={cn(
                           "transition-colors",
                           claseActual.completada
-                            ? "bg-[#16A34A] hover:bg-[#15803D]"
-                            : "bg-[#0244eb] hover:bg-[#00338D]",
+                            ? "bg-[#16A34A] hover:bg-[#15803D] text-white"
+                            : "bg-[#111827] hover:bg-[#1F2937] text-white",
                         )}
                       >
                         {claseActual.completada ? (
@@ -415,7 +415,7 @@ export default function CursoDetalle() {
                                   className={cn(
                                     "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors duration-200",
                                     selectedClase === clase.id
-                                      ? "bg-[#0244eb] text-white"
+                                      ? "bg-[#111827] text-white"
                                       : "hover:bg-[#F7F8FA] text-[#4B5563]",
                                   )}
                                 >
@@ -501,7 +501,7 @@ export default function CursoDetalle() {
                       {actividad.tipo === "cuestionario" && (actividad.estado === "pendiente" || actividad.estado === "no_entregado") && actividad.quizId && (
                         <Button
                           size="sm"
-                          className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors"
+                          className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors"
                           onClick={() => handleOpenQuiz(actividad.quizId!)}
                         >
                           <ClipboardList className="mr-1 h-4 w-4" />
@@ -524,7 +524,7 @@ export default function CursoDetalle() {
                       {actividad.tipo !== "cuestionario" && (actividad.estado === "pendiente" || actividad.estado === "no_entregado") && (
                         <Button
                           size="sm"
-                          className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors"
+                          className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors"
                           onClick={() => handleOpenEntrega(actividad)}
                         >
                           <Upload className="mr-1 h-4 w-4" />
@@ -632,7 +632,7 @@ export default function CursoDetalle() {
                 )}
 
                 <Button
-                  className="mt-6 bg-[#0244eb] hover:bg-[#0238c7] transition-colors"
+                  className="mt-6 bg-[#111827] hover:bg-[#1F2937] text-white transition-colors"
                   disabled={!cursoData.certificadoDisponible}
                   size="lg"
                 >
@@ -700,7 +700,7 @@ export default function CursoDetalle() {
               Cancelar
             </Button>
             <Button
-              className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors"
+              className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors"
               onClick={handleSubmitEntrega}
               disabled={!entregaTexto && !archivoSubido}
             >

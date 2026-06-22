@@ -35,7 +35,7 @@ export default function AlumnoLayout({ children }: { children: React.ReactNode }
                   href={item.href}
                   className={cn(
                     "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-200",
-                    isActive ? "bg-primary text-primary-foreground" : "text-text-secondary hover:bg-secondary",
+                    isActive ? "bg-[#111827] text-white" : "text-text-secondary hover:bg-secondary",
                   )}
                 >
                   <item.icon className="h-5 w-5" />

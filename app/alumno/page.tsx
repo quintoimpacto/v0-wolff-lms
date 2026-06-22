@@ -138,7 +138,7 @@ export default function AlumnoInicio() {
                 {"¡Hola, Juan! Estás a un paso de completar tu meta semanal. \n¿Continuamos con ECG Básico para el Médico Clínico?"}
               </h1>
             </div>
-            <Button className="bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-2" asChild>
+            <Button className="bg-[#111827] hover:bg-[#1F2937] text-white font-medium px-6 py-2" asChild>
               <Link href="/alumno/mis-cursos/ecg-basico">
                 Continuar donde lo dejé
               </Link>
@@ -229,7 +229,7 @@ export default function AlumnoInicio() {
                       <span className="text-sm font-medium text-muted-foreground">{curso.progreso}%</span>
                     </div>
                   </div>
-                  <Button className="bg-primary hover:bg-primary-hover text-primary-foreground shrink-0" size="sm" asChild>
+                  <Button className="bg-[#111827] hover:bg-[#1F2937] text-white shrink-0" size="sm" asChild>
                     <Link href={`/alumno/mis-cursos/${curso.id}`}>
                       <PlayCircle className="mr-2 h-4 w-4" />
                       Continuar
@@ -258,8 +258,8 @@ export default function AlumnoInicio() {
                     onClick={() => setFiltroActividad(filtro.value)}
                     className={`px-2 py-1.5 text-[10px] sm:text-xs font-medium rounded-[4px] border transition-colors truncate ${
                       filtroActividad === filtro.value
-                        ? "bg-primary text-primary-foreground border-primary"
-                        : "bg-card text-text-secondary border-border hover:border-primary hover:text-primary"
+                        ? "bg-[#111827] text-white border-[#111827]"
+                        : "bg-card text-text-secondary border-border hover:border-[#111827] hover:text-[#111827]"
                     }`}
                   >
                     {filtro.label}

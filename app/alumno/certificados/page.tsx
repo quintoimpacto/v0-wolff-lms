@@ -57,7 +57,7 @@ export default function Certificados() {
               <p className="mt-1 text-sm text-[#6B7280]">Emitido el {cert.fecha}</p>
               <p className="mt-1 text-xs text-[#6B7280]">Código: {cert.codigo}</p>
               <div className="mt-4 flex gap-2">
-                <Button className="flex-1 bg-[#0244eb] hover:bg-[#0238c7] transition-colors">
+                <Button className="flex-1 bg-[#111827] hover:bg-[#1F2937] text-white transition-colors">
                   <Download className="mr-2 h-4 w-4" />
                   Descargar PDF
                 </Button>

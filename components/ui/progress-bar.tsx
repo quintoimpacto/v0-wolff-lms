@@ -33,7 +33,7 @@ export function ProgressBar({
         className={cn("relative flex-1 overflow-hidden rounded-full bg-[#E5E7EB]", sizeClasses[size], trackClassName)}
       >
         <div
-          className={cn("h-full rounded-full bg-[#0244eb] transition-all duration-500", progressClassName)}
+          className={cn("h-full rounded-full bg-[#111827] transition-all duration-500", progressClassName)}
           style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
         />
         {showValue && valuePosition === "inside" && size === "lg" && (

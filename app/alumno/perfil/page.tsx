@@ -38,7 +38,7 @@ export default function Perfil() {
             <div className="relative">
               <Avatar className="h-32 w-32">
                 <AvatarImage src="/professional-man-portrait.png" alt="Avatar" className="object-cover" />
-                <AvatarFallback className="bg-[#0244eb] text-2xl text-white">JD</AvatarFallback>
+                <AvatarFallback className="bg-[#111827] text-2xl text-white">JD</AvatarFallback>
               </Avatar>
               <Button size="icon" variant="secondary" className="absolute bottom-0 right-0 h-10 w-10 rounded-full bg-[#F7F8FA] hover:bg-[#E5E7EB] border border-[#E5E7EB]">
                 <Camera className="h-4 w-4 text-[#4B5563]" />
@@ -177,7 +177,7 @@ export default function Perfil() {
               </div>
 
               <div className="flex justify-end">
-                <Button type="submit" className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors">
+                <Button type="submit" className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors">
                   <Save className="mr-2 h-4 w-4" />
                   Guardar cambios
                 </Button>
