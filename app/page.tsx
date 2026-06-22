@@ -423,14 +423,14 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Block - Hero Image (fully contained, floating with margin) */}
-          <div className="hidden md:flex flex-1 items-center justify-center py-10 lg:py-12">
+          {/* Right Block - Hero Image (anchored to banner bottom so the cropped portrait reads as intentional) */}
+          <div className="hidden md:flex flex-1 items-end justify-center self-stretch pt-12">
             <Image
               src="/hero-wolff-person.png"
               alt="Cardiólogo del Instituto Wolff"
-              width={340}
-              height={400}
-              className="h-auto max-h-[380px] w-auto object-contain"
+              width={420}
+              height={420}
+              className="h-auto max-h-[420px] w-auto object-contain object-bottom"
               priority
             />
           </div>
