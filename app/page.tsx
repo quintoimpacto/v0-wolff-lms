@@ -426,7 +426,7 @@ export default function HomePage() {
           {/* Right Block - Hero Image (fully visible, never taller than the banner) */}
           <div className="hidden md:flex flex-1 items-end justify-center self-stretch pt-8">
             <Image
-              src="/hero-wolff-doctor.png"
+              src="/hero-wolff-doctor-v2.png"
               alt="Cardiólogo del Instituto Wolff"
               width={320}
               height={320}
