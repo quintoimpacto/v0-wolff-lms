@@ -21,7 +21,7 @@ export default function AlumnoLayout({ children }: { children: React.ReactNode }
   return (
     <div className="min-h-screen bg-secondary">
       {/* Topbar (same as homepage) */}
-      <Header />
+      <Header variant="dashboard" />
 
       <div className="flex">
         {/* Desktop Sidebar */}
