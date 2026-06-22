@@ -563,8 +563,8 @@ export default function CursoDetalle() {
               return (
                 <Card key={material.id} className="border-[#E5E7EB] bg-white hover:border-[#0244eb]/30 transition-colors">
                   <CardContent className="flex items-start gap-4 p-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0244eb]/10">
-                      <IconComponent className="h-5 w-5 text-[#0244eb]" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#F3F4F6]">
+                      <IconComponent className="h-5 w-5 text-[#111827]" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="font-medium text-[#111827] truncate">{material.titulo}</h3>
