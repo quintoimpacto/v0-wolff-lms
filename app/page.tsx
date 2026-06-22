@@ -423,14 +423,14 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Block - Hero Image (anchored to banner bottom so the cropped portrait reads as intentional) */}
-          <div className="hidden md:flex flex-1 items-end justify-center self-stretch pt-12">
+          {/* Right Block - Hero Image (fully visible, anchored to banner bottom) */}
+          <div className="hidden md:flex flex-1 items-end justify-center self-stretch pt-8">
             <Image
               src="/hero-wolff-doctor.png"
               alt="Cardiólogo del Instituto Wolff"
-              width={420}
-              height={420}
-              className="h-auto max-h-[420px] w-auto object-contain object-bottom"
+              width={360}
+              height={360}
+              className="h-auto max-h-[340px] w-auto object-contain object-bottom"
               priority
             />
           </div>
