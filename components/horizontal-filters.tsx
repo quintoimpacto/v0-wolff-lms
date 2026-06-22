@@ -11,7 +11,7 @@ const filterSections = [
   {
     id: "categorias",
     title: "Categoría",
-    options: ["Ventas", "Legal", "Tasaciones", "Liderazgo", "Marketing", "Tecnología"],
+    options: ["Clínica", "Diagnóstico", "Prevención", "Deporte", "Imagen"],
   },
   {
     id: "modalidades",
