@@ -180,7 +180,7 @@ export default function AlumnoInicio() {
                   className="flex items-center justify-between rounded-xl border border-border bg-card p-4"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 flex-col items-center justify-center rounded-lg text-primary-foreground bg-[rgba(255,18,0,1)]">
+                    <div className="flex h-12 w-12 flex-col items-center justify-center rounded-lg text-white bg-hero-bg">
                       <span className="text-lg font-bold leading-none">{clase.dia}</span>
                       <span className="text-[10px] uppercase">{clase.mes}</span>
                     </div>
