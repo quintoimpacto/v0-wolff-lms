@@ -36,78 +36,78 @@ interface Enrollment {
 
 const inscripciones: Enrollment[] = [
   {
-    id: "corretaje-inmobiliario-101",
-    titulo: "Introducción al Corretaje Inmobiliario",
+    id: "ecg-basico",
+    titulo: "ECG Básico para el Médico Clínico",
     tipo: "Curso",
     estado: "en_curso",
     progreso: 65,
     clases: 10,
     clasesCompletadas: 6,
-    imagen: "/covers/introduccion-corretaje.png",
-    modalidad: "Online",
+    imagen: "/covers/ecg-basico.png",
+    modalidad: "Virtual sincrónico",
     fechaInscripcion: "2025-10-15",
   },
   {
-    id: "marketing-inmobiliario",
-    titulo: "Marketing Digital para Inmobiliarias",
+    id: "farmacologia-cardiologica",
+    titulo: "Farmacología en Cardiología",
     tipo: "Curso",
     estado: "pendiente_pago",
     progreso: 0,
     clases: 8,
     clasesCompletadas: 0,
-    imagen: "/covers/marketing-inmobiliario.jpg",
+    imagen: "/covers/insuficiencia-cardiaca.png",
     modalidad: "E-learning",
     fechaInscripcion: "2026-01-05",
     montoPendiente: 45000,
   },
   {
-    id: "fotografia-inmobiliaria",
-    titulo: "Fotografía Inmobiliaria Profesional",
+    id: "taller-ergometria",
+    titulo: "Taller: Interpretación de Ergometría",
     tipo: "Taller",
     estado: "en_curso",
     progreso: 10,
     clases: 6,
     clasesCompletadas: 1,
-    imagen: "/covers/fotografia-inmobiliaria.jpg",
-    modalidad: "Online",
+    imagen: "/covers/ergometria.png",
+    modalidad: "Presencial",
     fechaInscripcion: "2025-12-01",
   },
   {
-    id: "fundamentos-inmobiliarios",
-    titulo: "Fundamentos del Negocio Inmobiliario",
+    id: "riesgo-cardiovascular",
+    titulo: "Evaluación del Riesgo Cardiovascular",
     tipo: "Curso",
     estado: "certificado_disponible",
     progreso: 100,
     clases: 12,
     clasesCompletadas: 12,
-    imagen: "/covers/fundamentos-inmobiliarios.jpg",
+    imagen: "/covers/riesgo-cardiovascular.png",
     modalidad: "E-learning",
     fechaInscripcion: "2025-08-01",
     fechaFin: "2025-12-15",
   },
   {
-    id: "crm-inmobiliario",
-    titulo: "CRM para Agentes Inmobiliarios",
-    tipo: "Taller",
+    id: "webinar-arritmias",
+    titulo: "Webinar: Arritmias en la Práctica Diaria",
+    tipo: "Webinar",
     estado: "finalizado",
     progreso: 100,
     clases: 4,
     clasesCompletadas: 4,
-    imagen: "/covers/crm-inmobiliario.jpg",
-    modalidad: "Presencial",
+    imagen: "/covers/arritmias.png",
+    modalidad: "Virtual sincrónico",
     fechaInscripcion: "2025-09-10",
     fechaFin: "2025-11-20",
   },
   {
-    id: "diplomatura-corretaje",
-    titulo: "Diplomatura en Corretaje Inmobiliario",
+    id: "diplomatura-cardiologia",
+    titulo: "Diplomatura en Cardiología Clínica",
     tipo: "Diplomatura",
     estado: "en_curso",
     progreso: 45,
     clases: 24,
     clasesCompletadas: 11,
-    imagen: "/covers/diplomatura-corretaje.jpg",
-    modalidad: "Online",
+    imagen: "/covers/diplomatura-cardiologia.png",
+    modalidad: "Híbrido",
     fechaInscripcion: "2025-06-01",
   },
 ]
@@ -141,7 +141,7 @@ function EnrollmentCard({ enrollment, viewMode }: { enrollment: Enrollment; view
             </div>
             <div className="flex gap-2">
               {enrollment.estado === "en_curso" && (
-                <Button size="sm" className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors" asChild>
+                <Button size="sm" className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors" asChild>
                   <Link href={`/alumno/mis-cursos/${enrollment.id}`}>
                     <PlayCircle className="mr-1 h-4 w-4" />
                     Ir al aula
@@ -149,7 +149,7 @@ function EnrollmentCard({ enrollment, viewMode }: { enrollment: Enrollment; view
                 </Button>
               )}
               {enrollment.estado === "pendiente_pago" && (
-                <Button size="sm" className="bg-[#F59E0B] hover:bg-[#D97706] transition-colors">
+                <Button size="sm" className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors">
                   <CreditCard className="mr-1 h-4 w-4" />
                   Pagar ${enrollment.montoPendiente?.toLocaleString()}
                 </Button>
@@ -226,7 +226,7 @@ function EnrollmentCard({ enrollment, viewMode }: { enrollment: Enrollment; view
 
         <div className="mt-4 pt-2">
           {enrollment.estado === "en_curso" && (
-            <Button className="w-full bg-[#0244eb] hover:bg-[#0238c7] transition-colors" asChild>
+            <Button className="w-full bg-[#111827] hover:bg-[#1F2937] text-white transition-colors" asChild>
               <Link href={`/alumno/mis-cursos/${enrollment.id}`}>
                 <PlayCircle className="mr-2 h-4 w-4" />
                 Ir al aula
@@ -234,7 +234,7 @@ function EnrollmentCard({ enrollment, viewMode }: { enrollment: Enrollment; view
             </Button>
           )}
           {enrollment.estado === "pendiente_pago" && (
-            <Button className="w-full bg-[#F59E0B] hover:bg-[#D97706] transition-colors">
+            <Button className="w-full bg-[#111827] hover:bg-[#1F2937] text-white transition-colors">
               <CreditCard className="mr-2 h-4 w-4" />
               Pagar ${enrollment.montoPendiente?.toLocaleString()}
             </Button>
@@ -310,7 +310,7 @@ export default function MisCursos() {
                 <Filter className="mr-2 h-4 w-4" />
                 Estado
                 {estadoFilter.length > 0 && (
-                  <Badge className="ml-2 h-5 w-5 rounded-none bg-[#0244eb] text-white p-0 text-xs">{estadoFilter.length}</Badge>
+                  <Badge className="ml-2 h-5 w-5 rounded-none bg-[#111827] text-white p-0 text-xs">{estadoFilter.length}</Badge>
                 )}
               </Button>
             </DropdownMenuTrigger>
@@ -380,7 +380,7 @@ export default function MisCursos() {
             <Button
               variant="ghost"
               size="sm"
-              className={`h-9 rounded-r-none ${viewMode === "grid" ? "bg-[#F7F8FA] text-[#0244eb]" : "text-[#6B7280]"}`}
+              className={`h-9 rounded-r-none ${viewMode === "grid" ? "bg-[#F7F8FA] text-[#111827]" : "text-[#6B7280]"}`}
               onClick={() => setViewMode("grid")}
               aria-label="Vista en grilla"
             >
@@ -389,7 +389,7 @@ export default function MisCursos() {
             <Button
               variant="ghost"
               size="sm"
-              className={`h-9 rounded-l-none ${viewMode === "list" ? "bg-[#F7F8FA] text-[#0244eb]" : "text-[#6B7280]"}`}
+              className={`h-9 rounded-l-none ${viewMode === "list" ? "bg-[#F7F8FA] text-[#111827]" : "text-[#6B7280]"}`}
               onClick={() => setViewMode("list")}
               aria-label="Vista en lista"
             >
@@ -406,7 +406,7 @@ export default function MisCursos() {
       {filteredAndSorted.length === 0 ? (
         <Card className="border-[#E5E7EB] bg-white p-12 text-center">
           <p className="text-[#6B7280]">No se encontraron inscripciones con los filtros seleccionados.</p>
-          <Button variant="link" onClick={() => setEstadoFilter([])} className="mt-2 text-[#2563EB] hover:text-[#0244eb]">
+          <Button variant="link" onClick={() => setEstadoFilter([])} className="mt-2 text-[#111827] hover:text-[#1F2937]">
             Limpiar filtros
           </Button>
         </Card>

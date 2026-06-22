@@ -375,12 +375,12 @@ export default function HomePage() {
 
       {/* Hero Section - Wolff Crimson */}
       <section className="relative overflow-hidden bg-hero-bg">
-        <div className="mx-auto flex max-w-[1200px] items-end justify-center gap-8 lg:gap-12 px-8 lg:px-10">
+        <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-8 lg:gap-12 px-8 lg:px-10">
           {/* Left Block - Title + Search + Pills as one unit */}
-          <div className="relative z-10 py-10 md:py-12 lg:py-14 shrink-0">
+          <div className="relative z-10 flex-1 py-12 md:py-16 lg:py-20">
             {/* Title + Search + Pills shared container */}
-            <div className="flex flex-col gap-5 w-fit items-center">
-              <h1 className="w-full text-center font-medium text-hero-foreground leading-none font-sans lg:text-[2.65rem] text-5xl my-2">
+            <div className="flex flex-col gap-5 w-full max-w-[560px]">
+              <h1 className="w-full text-center font-medium text-hero-foreground leading-tight font-sans lg:text-[2.65rem] text-4xl sm:text-5xl">
                 Formación continua en Cardiología
               </h1>
               {/* Search Bar */}
@@ -404,13 +404,13 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Category Pills */}
-              <div className="flex flex-wrap gap-2.5 my-2">
+              {/* Category Pills - span full width of search bar */}
+              <div className="flex w-full justify-between gap-2">
                 {categories.map((cat) => (
                   <button
                     key={cat}
                     onClick={() => handleCategoryClick(cat)}
-                    className={`px-5 py-2 rounded-full text-sm font-medium border backdrop-blur-md transition-all duration-200 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] ${
+                    className={`flex-1 px-3 py-2 rounded-full text-sm font-medium border backdrop-blur-md transition-all duration-200 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] ${
                       activeCategory === cat
                         ? "bg-white/30 text-hero-foreground border-white/50"
                         : "bg-white/15 text-hero-foreground border-white/25 hover:bg-white/25 hover:border-white/40"
@@ -423,14 +423,14 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Block - Hero Image */}
-          <div className="hidden md:flex items-end shrink-0">
+          {/* Right Block - Hero Image (fully visible, never taller than the banner) */}
+          <div className="hidden md:flex flex-1 items-end justify-center self-stretch pt-8">
             <Image
-              src="/hero-wolff-person.png"
+              src="/hero-wolff-doctor-v2.png"
               alt="Cardiólogo del Instituto Wolff"
-              width={300}
-              height={340}
-              className="object-contain object-bottom"
+              width={320}
+              height={320}
+              className="h-auto max-h-full w-auto max-w-[300px] object-contain object-bottom"
               priority
             />
           </div>

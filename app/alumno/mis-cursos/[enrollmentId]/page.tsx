@@ -42,8 +42,8 @@ import { QuizModal, type QuizData, type QuizResult } from "@/components/quiz/qui
 
 // Mock data
 const cursoData = {
-  id: "corretaje-inmobiliario-101",
-  titulo: "Introducción al Corretaje Inmobiliario",
+  id: "ecg-basico",
+  titulo: "ECG Básico para el Médico Clínico",
   tipo: "Curso",
   progreso: 65,
   totalClases: 10,
@@ -60,19 +60,19 @@ const cursoData = {
 const modulos = [
   {
     id: "mod-1",
-    titulo: "Módulo 1: Fundamentos del Corretaje",
+    titulo: "Módulo 1: Fundamentos del ECG",
     clases: [
       {
         id: "clase-1",
-        titulo: "Introducción al mercado inmobiliario",
+        titulo: "Anatomía y fisiología del sistema de conducción",
         duracion: "45 min",
         completada: true,
         videoUrl: "#",
       },
-      { id: "clase-2", titulo: "Tipos de propiedades y clasificación", duracion: "38 min", completada: true, videoUrl: "#" },
+      { id: "clase-2", titulo: "Derivaciones y colocación de electrodos", duracion: "38 min", completada: true, videoUrl: "#" },
       {
         id: "clase-3",
-        titulo: "El rol del agente inmobiliario",
+        titulo: "El trazado normal: ondas, intervalos y segmentos",
         duracion: "52 min",
         completada: true,
         videoUrl: "#",
@@ -81,27 +81,27 @@ const modulos = [
   },
   {
     id: "mod-2",
-    titulo: "Módulo 2: Captación y Tasación",
+    titulo: "Módulo 2: Ritmo y Frecuencia",
     clases: [
-      { id: "clase-4", titulo: "Técnicas de captación de propiedades", duracion: "40 min", completada: true, videoUrl: "#" },
-      { id: "clase-5", titulo: "Métodos de tasación y valuación", duracion: "55 min", completada: true, videoUrl: "#" },
-      { id: "clase-6", titulo: "Análisis comparativo de mercado", duracion: "35 min", completada: true, videoUrl: "#" },
+      { id: "clase-4", titulo: "Cálculo de la frecuencia cardíaca", duracion: "40 min", completada: true, videoUrl: "#" },
+      { id: "clase-5", titulo: "Ritmo sinusal y arritmias frecuentes", duracion: "55 min", completada: true, videoUrl: "#" },
+      { id: "clase-6", titulo: "Extrasístoles y bloqueos", duracion: "35 min", completada: true, videoUrl: "#" },
     ],
   },
   {
     id: "mod-3",
-    titulo: "Módulo 3: Marketing y Ventas",
+    titulo: "Módulo 3: Trastornos de la Conducción",
     clases: [
-      { id: "clase-7", titulo: "Marketing digital inmobiliario", duracion: "48 min", completada: false, videoUrl: "#" },
-      { id: "clase-8", titulo: "Fotografía y presentación de propiedades", duracion: "50 min", completada: false, videoUrl: "#" },
+      { id: "clase-7", titulo: "Bloqueos de rama y hemibloqueos", duracion: "48 min", completada: false, videoUrl: "#" },
+      { id: "clase-8", titulo: "Síndromes de preexcitación", duracion: "50 min", completada: false, videoUrl: "#" },
     ],
   },
   {
     id: "mod-4",
-    titulo: "Módulo 4: Aspectos Legales y Cierre",
+    titulo: "Módulo 4: Isquemia e Infarto",
     clases: [
-      { id: "clase-9", titulo: "Marco legal de operaciones inmobiliarias", duracion: "45 min", completada: false, videoUrl: "#" },
-      { id: "clase-10", titulo: "Técnicas de negociación y cierre", duracion: "60 min", completada: false, videoUrl: "#" },
+      { id: "clase-9", titulo: "Cambios isquémicos en el ECG", duracion: "45 min", completada: false, videoUrl: "#" },
+      { id: "clase-10", titulo: "Localización del infarto y diagnóstico diferencial", duracion: "60 min", completada: false, videoUrl: "#" },
     ],
   },
 ]
@@ -119,7 +119,7 @@ const actividades = [
   },
   {
     id: "act-2",
-    titulo: "Análisis de caso: Tasación de departamento",
+    titulo: "Análisis de caso: Interpretación de un ECG patológico",
     tipo: "entrega",
     estado: "aprobado" as const,
     nota: 9,
@@ -137,7 +137,7 @@ const actividades = [
   },
   {
     id: "act-4",
-    titulo: "Trabajo práctico: Plan de marketing para propiedad",
+    titulo: "Trabajo práctico: Informe de un caso isquémico",
     tipo: "entrega",
     estado: "no_entregado" as const,
     fechaLimite: "2026-01-25",
@@ -145,7 +145,7 @@ const actividades = [
   },
   {
     id: "act-5",
-    titulo: "Foro de discusión: Tendencias del mercado 2026",
+    titulo: "Foro de discusión: Casos clínicos de arritmias",
     tipo: "foro",
     estado: "opcional" as const,
     obligatoria: false,
@@ -165,54 +165,54 @@ const actividades = [
 const cuestionarios: Record<string, QuizData> = {
   "quiz-1": {
     id: "quiz-1",
-    titulo: "Cuestionario Módulo 1: Fundamentos del Corretaje",
-    descripcion: "Evaluación conversacional sobre el mercado inmobiliario, tipos de propiedades y el rol del agente.",
-    modulosVinculados: ["Módulo 1: Fundamentos del Corretaje"],
+    titulo: "Cuestionario Módulo 1: Fundamentos del ECG",
+    descripcion: "Evaluación conversacional sobre el sistema de conducción, las derivaciones y el trazado normal.",
+    modulosVinculados: ["Módulo 1: Fundamentos del ECG"],
     intentosPermitidos: 3,
     intentosRealizados: 1,
     notaAprobacion: 60,
     mejorNota: 8,
     preguntas: [
-      { id: "q1-1", pregunta: "¿Cuáles son las principales características que definen al mercado inmobiliario y qué lo diferencia de otros mercados?" },
-      { id: "q1-2", pregunta: "Explicame con tus palabras cómo se clasifican las propiedades según su uso y dame un ejemplo de cada tipo." },
-      { id: "q1-3", pregunta: "¿Cuáles son las principales funciones y responsabilidades de un agente inmobiliario profesional?" },
-      { id: "q1-4", pregunta: "¿Qué diferencia existe entre un corredor inmobiliario matriculado y un agente independiente?" },
-      { id: "q1-5", pregunta: "¿Por qué es importante la ética profesional en el corretaje inmobiliario? Dame un ejemplo de una situación donde aplique." },
+      { id: "q1-1", pregunta: "¿Cuáles son los componentes del sistema de conducción cardíaco y qué función cumple cada uno?" },
+      { id: "q1-2", pregunta: "Explicame con tus palabras qué representan las derivaciones del plano frontal y del plano horizontal, y dame un ejemplo de cada una." },
+      { id: "q1-3", pregunta: "¿Qué representan la onda P, el complejo QRS y la onda T en el electrocardiograma?" },
+      { id: "q1-4", pregunta: "¿Cuáles son los valores normales del intervalo PR y del complejo QRS, y qué indican sus alteraciones?" },
+      { id: "q1-5", pregunta: "¿Por qué es importante la correcta colocación de los electrodos? Dame un ejemplo de un error frecuente y sus consecuencias." },
     ],
   },
   "quiz-2": {
     id: "quiz-2",
-    titulo: "Cuestionario Módulo 2: Captación y Tasación",
-    descripcion: "Evaluación conversacional sobre técnicas de captación, métodos de tasación y análisis de mercado.",
-    modulosVinculados: ["Módulo 2: Captación y Tasación"],
+    titulo: "Cuestionario Módulo 2: Ritmo y Frecuencia",
+    descripcion: "Evaluación conversacional sobre el cálculo de la frecuencia, el ritmo sinusal y las arritmias frecuentes.",
+    modulosVinculados: ["Módulo 2: Ritmo y Frecuencia"],
     intentosPermitidos: 3,
     intentosRealizados: 0,
     notaAprobacion: 60,
     preguntas: [
-      { id: "q2-1", pregunta: "¿Cuáles son las principales técnicas para captar propiedades y cómo abordarías a un potencial propietario vendedor?" },
-      { id: "q2-2", pregunta: "Describí brevemente en qué consiste el método comparativo de tasación y qué variables considerarías." },
-      { id: "q2-3", pregunta: "¿Qué es un análisis comparativo de mercado (ACM) y para qué sirve?" },
-      { id: "q2-4", pregunta: "¿Cómo determinarías el precio de publicación de una propiedad y qué factores influyen en su valor?" },
-      { id: "q2-5", pregunta: "¿Qué importancia tiene la ubicación en la valuación de una propiedad? Dame ejemplos concretos." },
-      { id: "q2-6", pregunta: "Si un propietario tiene expectativas de precio muy superiores al valor de mercado, ¿cómo manejarías esa situación?" },
+      { id: "q2-1", pregunta: "¿Qué métodos conocés para calcular la frecuencia cardíaca a partir de un ECG y cuándo conviene usar cada uno?" },
+      { id: "q2-2", pregunta: "Describí brevemente los criterios que definen un ritmo sinusal normal." },
+      { id: "q2-3", pregunta: "¿Cómo diferenciarías una fibrilación auricular de un aleteo (flutter) auricular en el trazado?" },
+      { id: "q2-4", pregunta: "¿Qué son las extrasístoles ventriculares y cómo se reconocen en el ECG?" },
+      { id: "q2-5", pregunta: "¿Cuáles son los grados de bloqueo auriculoventricular y cómo se distinguen entre sí?" },
+      { id: "q2-6", pregunta: "Si encontrás una bradicardia sintomática en un paciente, ¿qué hallazgos del ECG orientarían tu conducta?" },
     ],
   },
   "quiz-3": {
     id: "quiz-3",
-    titulo: "Cuestionario Módulos 3 y 4: Marketing, Legales y Cierre",
-    descripcion: "Evaluación integral conversacional sobre marketing inmobiliario, aspectos legales y técnicas de negociación.",
-    modulosVinculados: ["Módulo 3: Marketing y Ventas", "Módulo 4: Aspectos Legales y Cierre"],
+    titulo: "Cuestionario Módulos 3 y 4: Conducción, Isquemia e Infarto",
+    descripcion: "Evaluación integral conversacional sobre trastornos de la conducción, cambios isquémicos y diagnóstico del infarto.",
+    modulosVinculados: ["Módulo 3: Trastornos de la Conducción", "Módulo 4: Isquemia e Infarto"],
     intentosPermitidos: 2,
     intentosRealizados: 0,
     notaAprobacion: 70,
     preguntas: [
-      { id: "q3-1", pregunta: "¿Cuáles son los canales de marketing digital más efectivos para promocionar propiedades y por qué?" },
-      { id: "q3-2", pregunta: "Explicame qué elementos debe tener una buena publicación inmobiliaria para atraer compradores." },
-      { id: "q3-3", pregunta: "¿Qué documentación debe verificar un agente inmobiliario antes de publicar una propiedad en venta?" },
-      { id: "q3-4", pregunta: "¿Cuáles son los pasos legales principales en una operación de compraventa de inmueble?" },
-      { id: "q3-5", pregunta: "¿Qué es una reserva y qué es un boleto de compraventa? ¿Cuál es la diferencia?" },
-      { id: "q3-6", pregunta: "¿Cómo manejarías una negociación donde comprador y vendedor tienen expectativas muy diferentes?" },
-      { id: "q3-7", pregunta: "¿Qué técnicas de cierre utilizarías para concretar una operación cuando el comprador está indeciso?" },
+      { id: "q3-1", pregunta: "¿Cómo se reconocen en el ECG el bloqueo de rama derecha y el de rama izquierda, y por qué es importante diferenciarlos?" },
+      { id: "q3-2", pregunta: "Explicame qué son los hemibloqueos y cómo afectan el eje eléctrico cardíaco." },
+      { id: "q3-3", pregunta: "¿Qué caracteriza al síndrome de Wolff-Parkinson-White en el electrocardiograma?" },
+      { id: "q3-4", pregunta: "¿Cuáles son los cambios electrocardiográficos típicos de la isquemia, la lesión y la necrosis?" },
+      { id: "q3-5", pregunta: "¿Qué diferencia hay entre un infarto con supradesnivel del ST (IAMCEST) y uno sin supradesnivel?" },
+      { id: "q3-6", pregunta: "¿Cómo localizarías un infarto según las derivaciones afectadas? Dame un ejemplo de cara anterior e inferior." },
+      { id: "q3-7", pregunta: "Ante un dolor torácico con ECG dudoso, ¿qué conducta y qué estudios complementarios indicarías?" },
     ],
   },
 }
@@ -220,10 +220,10 @@ const cuestionarios: Record<string, QuizData> = {
 const materiales = [
   { id: "mat-1", titulo: "Presentación Módulo 1", tipo: "pdf", tamaño: "2.4 MB", modulo: "Módulo 1" },
   { id: "mat-2", titulo: "Presentación Módulo 2", tipo: "pdf", tamaño: "3.1 MB", modulo: "Módulo 2" },
-  { id: "mat-3", titulo: "Glosario de términos inmobiliarios", tipo: "pdf", tamaño: "890 KB", modulo: "General" },
-  { id: "mat-4", titulo: "Planilla de cálculo - Tasación", tipo: "xlsx", tamaño: "156 KB", modulo: "Módulo 2" },
-  { id: "mat-5", titulo: "Video complementario: Caso real de venta", tipo: "video", tamaño: "45 MB", modulo: "Módulo 4" },
-  { id: "mat-6", titulo: "Infografía: Proceso de compraventa", tipo: "imagen", tamaño: "1.2 MB", modulo: "Módulo 4" },
+  { id: "mat-3", titulo: "Glosario de términos electrocardiográficos", tipo: "pdf", tamaño: "890 KB", modulo: "General" },
+  { id: "mat-4", titulo: "Planilla de cálculo - Frecuencia y ejes", tipo: "xlsx", tamaño: "156 KB", modulo: "Módulo 2" },
+  { id: "mat-5", titulo: "Video complementario: Caso real de IAMCEST", tipo: "video", tamaño: "45 MB", modulo: "Módulo 4" },
+  { id: "mat-6", titulo: "Infografía: Localización del infarto por derivaciones", tipo: "imagen", tamaño: "1.2 MB", modulo: "Módulo 4" },
 ]
 
 const estadoActividadConfig = {
@@ -312,25 +312,25 @@ export default function CursoDetalle() {
         <TabsList className="h-auto flex-wrap gap-2 bg-transparent p-0">
           <TabsTrigger
             value="clases"
-            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#0244eb] data-[state=active]:bg-[#0244eb] data-[state=active]:text-white"
+            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#111827] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
           >
             Clases
           </TabsTrigger>
           <TabsTrigger
             value="actividades"
-            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#0244eb] data-[state=active]:bg-[#0244eb] data-[state=active]:text-white"
+            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#111827] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
           >
             Actividades
           </TabsTrigger>
           <TabsTrigger
             value="materiales"
-            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#0244eb] data-[state=active]:bg-[#0244eb] data-[state=active]:text-white"
+            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#111827] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
           >
             Materiales
           </TabsTrigger>
           <TabsTrigger
             value="certificado"
-            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#0244eb] data-[state=active]:bg-[#0244eb] data-[state=active]:text-white"
+            className="rounded-lg border border-[#E5E7EB] bg-white text-[#4B5563] px-4 py-2 data-[state=active]:border-[#111827] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
           >
             Certificado
           </TabsTrigger>
@@ -364,8 +364,8 @@ export default function CursoDetalle() {
                         className={cn(
                           "transition-colors",
                           claseActual.completada
-                            ? "bg-[#16A34A] hover:bg-[#15803D]"
-                            : "bg-[#0244eb] hover:bg-[#00338D]",
+                            ? "bg-[#16A34A] hover:bg-[#15803D] text-white"
+                            : "bg-[#111827] hover:bg-[#1F2937] text-white",
                         )}
                       >
                         {claseActual.completada ? (
@@ -415,7 +415,7 @@ export default function CursoDetalle() {
                                   className={cn(
                                     "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors duration-200",
                                     selectedClase === clase.id
-                                      ? "bg-[#0244eb] text-white"
+                                      ? "bg-[#111827] text-white"
                                       : "hover:bg-[#F7F8FA] text-[#4B5563]",
                                   )}
                                 >
@@ -465,8 +465,8 @@ export default function CursoDetalle() {
                     <div className="space-y-1">
                       <div className="flex flex-wrap items-center gap-2">
                         {actividad.tipo === "cuestionario" && (
-                          <div className="flex h-6 w-6 items-center justify-center rounded bg-[#0244eb]/10">
-                            <ClipboardList className="h-3.5 w-3.5 text-[#0244eb]" />
+                          <div className="flex h-6 w-6 items-center justify-center rounded bg-[#F3F4F6]">
+                            <ClipboardList className="h-3.5 w-3.5 text-[#111827]" />
                           </div>
                         )}
                         <h3 className="font-medium text-[#111827]">{actividad.titulo}</h3>
@@ -501,7 +501,7 @@ export default function CursoDetalle() {
                       {actividad.tipo === "cuestionario" && (actividad.estado === "pendiente" || actividad.estado === "no_entregado") && actividad.quizId && (
                         <Button
                           size="sm"
-                          className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors"
+                          className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors"
                           onClick={() => handleOpenQuiz(actividad.quizId!)}
                         >
                           <ClipboardList className="mr-1 h-4 w-4" />
@@ -524,7 +524,7 @@ export default function CursoDetalle() {
                       {actividad.tipo !== "cuestionario" && (actividad.estado === "pendiente" || actividad.estado === "no_entregado") && (
                         <Button
                           size="sm"
-                          className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors"
+                          className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors"
                           onClick={() => handleOpenEntrega(actividad)}
                         >
                           <Upload className="mr-1 h-4 w-4" />
@@ -563,8 +563,8 @@ export default function CursoDetalle() {
               return (
                 <Card key={material.id} className="border-[#E5E7EB] bg-white hover:border-[#0244eb]/30 transition-colors">
                   <CardContent className="flex items-start gap-4 p-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0244eb]/10">
-                      <IconComponent className="h-5 w-5 text-[#0244eb]" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#F3F4F6]">
+                      <IconComponent className="h-5 w-5 text-[#111827]" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="font-medium text-[#111827] truncate">{material.titulo}</h3>
@@ -632,7 +632,7 @@ export default function CursoDetalle() {
                 )}
 
                 <Button
-                  className="mt-6 bg-[#0244eb] hover:bg-[#0238c7] transition-colors"
+                  className="mt-6 bg-[#111827] hover:bg-[#1F2937] text-white transition-colors"
                   disabled={!cursoData.certificadoDisponible}
                   size="lg"
                 >
@@ -700,7 +700,7 @@ export default function CursoDetalle() {
               Cancelar
             </Button>
             <Button
-              className="bg-[#0244eb] hover:bg-[#0238c7] transition-colors"
+              className="bg-[#111827] hover:bg-[#1F2937] text-white transition-colors"
               onClick={handleSubmitEntrega}
               disabled={!entregaTexto && !archivoSubido}
             >

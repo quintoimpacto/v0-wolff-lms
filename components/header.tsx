@@ -4,17 +4,23 @@ import Image from "next/image"
 import { Bell } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
-export function Header() {
+export function Header({ variant = "default" }: { variant?: "default" | "dashboard" }) {
   return (
     <header className="sticky top-0 z-50 w-full bg-background shadow-sm">
-      <div className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-8 lg:px-10">
+      <div
+        className={
+          variant === "dashboard"
+            ? "flex h-20 w-full items-center justify-between pl-7 pr-4 lg:pr-6"
+            : "mx-auto flex h-20 max-w-[1200px] items-center justify-between px-8 lg:px-10"
+        }
+      >
         {/* Logo */}
         <Image
           src="/wolff-logo.png"
           alt="Instituto Wolff Cardiología"
-          width={120}
-          height={40}
-          className="h-9 w-auto object-contain"
+          width={200}
+          height={64}
+          className="h-14 w-auto object-contain"
           priority
         />
 
