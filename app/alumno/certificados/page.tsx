@@ -6,31 +6,31 @@ import { BackButton } from "@/components/back-button"
 const certificados = [
   {
     id: "cert-001",
-    curso: "Introducción al Corretaje Inmobiliario",
+    curso: "Evaluación del Riesgo Cardiovascular",
     fecha: "15 de Diciembre, 2025",
-    codigo: "REMAX-2025-ICI-001234",
-    imagen: "/covers/introduccion-corretaje.png",
+    codigo: "WOLFF-2025-ERC-001234",
+    imagen: "/covers/riesgo-cardiovascular.png",
   },
   {
     id: "cert-002",
-    curso: "Tasación y Validación de Propiedades",
+    curso: "Monitoreo Holter e Interpretación",
     fecha: "28 de Noviembre, 2025",
-    codigo: "REMAX-2025-TVP-001198",
-    imagen: "/covers/tasacion-validacion.png",
+    codigo: "WOLFF-2025-HOL-001198",
+    imagen: "/covers/holter.png",
   },
   {
     id: "cert-003",
-    curso: "Aspectos Legales del Corretaje",
+    curso: "Webinar: Arritmias en la Práctica Diaria",
     fecha: "10 de Octubre, 2025",
-    codigo: "REMAX-2025-ALC-000987",
-    imagen: "/covers/aspectos-legales.png",
+    codigo: "WOLFF-2025-ARR-000987",
+    imagen: "/covers/arritmias.png",
   },
   {
     id: "cert-004",
-    curso: "Marketing Digital para Inmobiliarias",
+    curso: "Hipertensión Arterial: Diagnóstico y Tratamiento",
     fecha: "5 de Septiembre, 2025",
-    codigo: "REMAX-2025-MDI-000876",
-    imagen: "/covers/marketing-inmobiliario.jpg",
+    codigo: "WOLFF-2025-HTA-000876",
+    imagen: "/covers/hipertension.png",
   },
 ]
 

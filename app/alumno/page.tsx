@@ -9,25 +9,25 @@ import { ProgressBar } from "@/components/ui/progress-bar"
 
 const cursosEnProgreso = [
   {
-    id: "corretaje-inmobiliario-101",
-    titulo: "Introducción al Corretaje Inmobiliario",
+    id: "ecg-basico",
+    titulo: "ECG Básico para el Médico Clínico",
     progreso: 65,
-    ultimaClase: "Clase 7: Técnicas de negociación efectiva",
-    imagen: "/covers/introduccion-corretaje.png",
+    ultimaClase: "Clase 7: Trastornos de la conducción",
+    imagen: "/covers/ecg-basico.png",
   },
   {
-    id: "tasacion-propiedades",
-    titulo: "Tasación y Valuación de Propiedades",
+    id: "ecocardiografia-basica",
+    titulo: "Ecocardiografía Básica",
     progreso: 30,
-    ultimaClase: "Clase 3: Métodos de valuación comparativa",
-    imagen: "/covers/tasacion-validacion.png",
+    ultimaClase: "Clase 3: Evaluación de cámaras cardíacas",
+    imagen: "/covers/ecocardiografia.png",
   },
   {
-    id: "marketing-inmobiliario",
-    titulo: "Marketing Digital para Inmobiliarias",
+    id: "insuficiencia-cardiaca",
+    titulo: "Insuficiencia Cardíaca: Actualización 2026",
     progreso: 45,
-    ultimaClase: "Clase 4: Estrategias en redes sociales",
-    imagen: "/covers/marketing-inmobiliario.jpg",
+    ultimaClase: "Clase 4: Tratamiento farmacológico actual",
+    imagen: "/covers/insuficiencia-cardiaca.png",
   },
 ]
 
@@ -42,23 +42,23 @@ const actividadesPendientes = [
   {
     id: "1",
     titulo: "Cuestionario Módulo 2",
-    curso: "Introducción al Corretaje Inmobiliario",
+    curso: "ECG Básico para el Médico Clínico",
     vencimiento: "Venció hace 12 días",
     estado: "pendiente" as const,
     icon: FileText,
   },
   {
     id: "2",
-    titulo: "Trabajo práctico: Tasación de propiedad",
-    curso: "Tasación y Valuación de Propiedades",
+    titulo: "Trabajo práctico: Interpretación de trazado",
+    curso: "Ecocardiografía Básica",
     vencimiento: "Venció hace 7 días",
     estado: "no_entregado" as const,
     icon: AlertTriangle,
   },
   {
     id: "3",
-    titulo: "Foro de discusión",
-    curso: "Diplomatura en Corretaje Inmobiliario",
+    titulo: "Foro de discusión clínica",
+    curso: "Diplomatura en Cardiología Clínica",
     vencimiento: "Entregado hace 5 días",
     estado: "aprobado" as const,
     icon: CheckCircle,
@@ -66,15 +66,15 @@ const actividadesPendientes = [
   {
     id: "4",
     titulo: "Cuestionario Módulo 3",
-    curso: "Introducción al Corretaje Inmobiliario",
+    curso: "ECG Básico para el Médico Clínico",
     vencimiento: "Vence en 3 días",
     estado: "pendiente" as const,
     icon: FileText,
   },
   {
     id: "5",
-    titulo: "Entrega final",
-    curso: "Tasación y Valuación de Propiedades",
+    titulo: "Caso clínico final",
+    curso: "Insuficiencia Cardíaca: Actualización 2026",
     vencimiento: "Venció hace 2 días",
     estado: "no_entregado" as const,
     icon: AlertTriangle,
@@ -88,14 +88,14 @@ const proximasClases = [
     id: "1",
     dia: "15",
     mes: "Ene",
-    titulo: "Webinar: Tendencias del mercado inmobiliario 2026",
+    titulo: "Webinar: Arritmias en la Práctica Diaria",
     hora: "10:00 hs - Online",
   },
   {
     id: "2",
     dia: "22",
     mes: "Ene",
-    titulo: "Clase sincrónica: Técnicas de Negociación",
+    titulo: "Clase sincrónica: Manejo de la Hipertensión Arterial",
     hora: "18:00 hs - Online",
   },
 ]
@@ -103,12 +103,12 @@ const proximasClases = [
 const anuncios = [
   {
     id: "1",
-    titulo: "Nueva edición del curso de Marketing Inmobiliario disponible",
+    titulo: "Nueva edición de la Diplomatura en Cardiología Clínica disponible",
     fecha: "7 de enero",
   },
   {
     id: "2",
-    titulo: "Mantenimiento programado el 15 de enero",
+    titulo: "Mantenimiento programado del campus el 15 de enero",
     fecha: "5 de enero",
   },
 ]
@@ -135,11 +135,11 @@ export default function AlumnoInicio() {
           <CardContent className="flex flex-col items-start justify-center gap-4 px-6 pt-6 pb-4 sm:px-8 sm:pt-8 sm:pb-5">
             <div className="space-y-2">
               <h1 className="text-2xl font-semibold text-foreground sm:text-3xl leading-9">
-                {"¡Hola, Juan! Estás a un paso de completar tu meta semanal. \n¿Continuamos con Introducción al Corretaje?"}
+                {"¡Hola, Juan! Estás a un paso de completar tu meta semanal. \n¿Continuamos con ECG Básico para el Médico Clínico?"}
               </h1>
             </div>
             <Button className="bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-2" asChild>
-              <Link href="/alumno/mis-cursos/corretaje-inmobiliario-101">
+              <Link href="/alumno/mis-cursos/ecg-basico">
                 Continuar donde lo dejé
               </Link>
             </Button>

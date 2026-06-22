@@ -19,8 +19,8 @@ export default function Perfil() {
     telefono: "+54 11 1234-5678",
     dni: "30.123.456",
     provincia: "Buenos Aires",
-    empresa: "Inversiones S.A.",
-    cargo: "Analista Financiero",
+    empresa: "Hospital Italiano de Buenos Aires",
+    cargo: "Médico Cardiólogo",
   })
 
   return (
@@ -157,7 +157,7 @@ export default function Perfil() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="empresa" className="text-[#111827]">Empresa</Label>
+                  <Label htmlFor="empresa" className="text-[#111827]">Institución</Label>
                   <Input
                     id="empresa"
                     value={formData.empresa}
@@ -166,7 +166,7 @@ export default function Perfil() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="cargo" className="text-[#111827]">Cargo</Label>
+                  <Label htmlFor="cargo" className="text-[#111827]">Especialidad</Label>
                   <Input
                     id="cargo"
                     value={formData.cargo}
