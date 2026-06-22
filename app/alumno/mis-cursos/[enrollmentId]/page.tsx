@@ -465,8 +465,8 @@ export default function CursoDetalle() {
                     <div className="space-y-1">
                       <div className="flex flex-wrap items-center gap-2">
                         {actividad.tipo === "cuestionario" && (
-                          <div className="flex h-6 w-6 items-center justify-center rounded bg-[#0244eb]/10">
-                            <ClipboardList className="h-3.5 w-3.5 text-[#0244eb]" />
+                          <div className="flex h-6 w-6 items-center justify-center rounded bg-[#F3F4F6]">
+                            <ClipboardList className="h-3.5 w-3.5 text-[#111827]" />
                           </div>
                         )}
                         <h3 className="font-medium text-[#111827]">{actividad.titulo}</h3>
